@@ -40,11 +40,13 @@ public class ControleRemoto implements Controlador {
     @Override
     public void ligar() {
         this.setLigado(true);
+        System.out.println("A TV está ligada...");
     }
 
     @Override
     public void desligar() {
         this.setLigado(false);
+        System.out.println("A TV está desligada...");
     }
 
     @Override
@@ -89,6 +91,8 @@ public class ControleRemoto implements Controlador {
     public void ligarMudo() {
         if (this.getLigado() && this.getVolume() > 0) {
             this.setVolume(0);
+        }else {
+            System.out.println("Não foi possivel ligar o mudo...");
         }
 
     }
@@ -97,6 +101,8 @@ public class ControleRemoto implements Controlador {
     public void desligarMudo() {
         if (this.getLigado() && this.getVolume() == 0) {
             this.setVolume(50);
+        }else {
+            System.out.println("Não foi possivel desligar o mudo...");
         }
 
     }

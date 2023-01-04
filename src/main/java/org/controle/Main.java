@@ -8,6 +8,7 @@ public class Main {
         c.ligar();
         c.maisVolume();
         c.play();
+        c.pause();
         c.abirMenu();
         c.fecharMenu();
 
